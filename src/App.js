@@ -24,6 +24,8 @@ function App() {
   }
   //FIM Listar
 
+  
+  //INI Remover um repositório da sua API: Para cada item da sua lista, deve possuir um botão com o texto Remover que, ao clicar, irá chamar uma função para remover esse item da lista do seu frontend e da sua API.
   async function handleRemoveRepository(id) {
     await api.delete(`repositories/${id}`);
 
@@ -31,7 +33,10 @@ function App() {
       repository => repository.id !== id
     ))
   }
+  //FIM Remover
 
+
+  //INI Adicionar um repositório a sua API: Deve ser capaz de adicionar um novo item na sua API através de um botão com o texto Adicionar e, após a criação, deve ser capaz de exibir o nome dele após o cadastro. 
   return (
     <div>
       <ul data-testid="repository-list">
@@ -49,6 +54,7 @@ function App() {
       <button onClick={handleAddRepository}>Adicionar</button>
     </div>
   );
+  //FIM Adicionar
 }
 
 export default App;
